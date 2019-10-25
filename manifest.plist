@@ -17,8 +17,6 @@
                     <dict>
                         <key>kind</key>
                         <string>display-image</string>
-                        <key>needs-shine</key>
-                        <true/>
                         <key>url</key>
                         <string>https://xattacker.github.io/myGuiMini_57.png</string>
                         <!-- a fully-qualified URL pointing to a 57×57-pixel (72x72 for iPad) PNG icon used during download and installation -->
@@ -26,8 +24,6 @@
                     <dict>
                         <key>kind</key>
                         <string>full-size-image</string>
-                        <key>needs-shine</key>
-                        <true/>
                         <key>url</key>
                         <string>https://xattacker.github.io/myGuiMini_512.png</string>
                         <!-- a fully-qualified URL pointing to a 512×512-pixel PNG image that represents the iTunes app -->
