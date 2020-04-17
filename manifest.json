@@ -1,0 +1,16 @@
+{
+　"short_name": "XattackerGithub",
+　"name": "XattackerGithub",
+　"icons": [{
+　　"src":"https://avatars3.githubusercontent.com/u/33754378?s=460&u=85ba14e879f4f9a59d20bbfc303954d316c1e3e0&v=4",
+　　"sizes": "192×192",
+　　"type": "image/png"
+　　}],
+　"start_url": "https://xattacker.github.io",
+　"background_color": "#000",
+　"theme_color": "#536878",
+　"display": "standalone"
+}
+
+
+
