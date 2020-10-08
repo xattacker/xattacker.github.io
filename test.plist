@@ -33,15 +33,15 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.gddlkj.projects.dloaiphone</string>
+				<string>com.tcci.CRM</string>
 				<key>bundle-version</key>
-				<string>1.081</string>
+				<string>1.0.2</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>subtitle</key>
-				<string>GDDLKJ</string>
+				<string>Taiwan Cement</string>
 				<key>title</key>
-				<string>DLOA_iPhone</string>
+				<string>台泥行動業務</string>
 			</dict>
 		</dict>
 	</array>
