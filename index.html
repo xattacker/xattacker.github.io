@@ -44,13 +44,20 @@
 </form>
  
 <br><br>
-<button onclick="alert('Hello\nHow are you?');">show Alert</button>
+<button onclick="showOpenAppAlert()">show Open App Alert</button>
 
   <br><br>
    <p>Click the button to open the app using Universal Link:</p>
     <button onclick="openApp()">Open App</button>
    
   <script>
+  function showOpenAppAlert() {
+    var yes = confirm('開啟App？');
+    if (yes) {
+         openApp();
+    }
+  }
+    
         function openApp() {
             // Replace 'yourapp://' with your app's universal link
             var universalLink = 'https://www.int.car-plus.cool/srental/recall/Proceess?key=f8c8787d-ac23-49c2-8b35-584ebd153bd2';
