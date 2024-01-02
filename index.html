@@ -45,6 +45,24 @@
  
 <br><br>
 <button onclick="alert('Hello\nHow are you?');">show Alert</button>
+
+  <br><br>
+   <p>Click the button to open the app using Universal Link:</p>
+    <button onclick="openApp()">Open App</button>
+   
+  <script>
+        function openApp() {
+            // Replace 'yourapp://' with your app's universal link
+            var universalLink = 'https://www.int.car-plus.cool/srental/recall/Proceess?key=f8c8787d-ac23-49c2-8b35-584ebd153bd2';
+
+            // Try to open the app using the universal link
+            window.location.href = universalLink;
+
+            // If the app is not installed, the user will stay on the current page
+            // You can handle this case by redirecting the user to the App Store
+            // or showing a message encouraging them to install the app.
+        }
+</script>
   
 </body>
 </html>
