@@ -48,7 +48,7 @@
 
   <br><br>
    <p>Click the button to open the app using Universal Link:</p>
-    <button onclick="openApp()">Open App</button>
+    <button onclick="checkAppExisted('https://www.int.car-plus.cool/srental/recall/Proceess?key=f8c8787d-ac23-49c2-8b35-584ebd153bd', 'https://www.int.car-plus.cool')">Open App</button>
    
   <script>
   function showOpenAppAlert() {
@@ -68,6 +68,30 @@
             // If the app is not installed, the user will stay on the current page
             // You can handle this case by redirecting the user to the App Store
             // or showing a message encouraging them to install the app.
+        }
+
+     function checkAppExisted(scheme_url, download_url, timeout = 600) {
+            var startTime = Date.now();
+            var ifr = document.createElement('iframe');
+        
+            ifr.src = scheme_url;
+            ifr.style.display = 'none';
+            document.body.appendChild(ifr);
+            var t = setTimeout(function() {
+                var endTime = Date.now();
+                if (!startTime || endTime - startTime < timeout + 200) {
+                    //未安裝應用程式執行部分
+                    // if (confirm("您未安裝 Line，要前往 Line 官網嗎？")) {
+                    //     window.open(download_url, "_blank");
+                    // }
+                }
+            }, timeout);
+            window.onblur = function() {
+                clearTimeout(t);
+                window.addEventListener("DOMContentLoaded", function() {
+                    document.body.removeChild(ifr);
+                }, false);
+            }
         }
 </script>
   
