@@ -30,8 +30,7 @@
     Google Map </a>
 <br><br>
 
-<br><br>
-  <a href='util_tool_kit://link?q=tapei'>UtilToolKit </a>
+<button onclick="openUtilToolKitApp()">UtilToolKit</button>
 <br><br>
 
 <form action="demo-form.php">
@@ -59,6 +58,10 @@
   <button onclick="isAppInstalled('carplusgosmartint://srental.recall?key=8e21bki')">Check App Existed</button>
    
   <script>
+  function openUtilToolKitApp() {
+     window.location.href = 'util_tool_kit://link?q=tapei';
+  }
+
   function showOpenAppAlert() {
     var yes = confirm('開啟App？');
     if (yes) {
