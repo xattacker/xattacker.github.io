@@ -56,7 +56,11 @@
   
   <br><br><br>
   <button onclick="isAppInstalled('carplusgosmartint://srental.recall?key=8e21bki')">Check App Existed</button>
-   
+       
+  <br><br><br>
+  <button onclick="callAppEvent()">Open App</button>
+
+
   <script>
   function openUtilToolKitApp() {
      window.location.href = 'cpliberaytester://www.car-plus.com.tw?code=def502003a45ec745152afb5d92ef04ddc0e9d0d5286ad48a620b82741748b4e6562bf8a5c1978c3890be3fce0f7f744175a6d99e231695818cd7a2cf0272b811096e1d4fb1d183e0908e3626caec79e7a688238ce7b748cfeaa40ba8e76353f1f2c6dd0c90d7fea563345ffc538e8e80d9f209e5218fe6547c4e3d681ccfa5dde5d27a310fb01e3e17382e624bed021323d1741585a09cd3a6f4d59a34522349dbccfdf3dac7bcbf252b461e5406f8db0affbd5c2e02c156581bd7dccc94e5e9f53804c4c7599961157bec815f311fc5abb13cf61d3a8b0194a75e180be1fdeb591bd7962fa75c26c1fe2637754e13fa53e9eff499c212f418e6a99484fef785608ff4df81bfe3aa9bb4ce0c059bdc0d4f8b5acf497bf462ca50dd9f22ce1bd77b6630c31762fafff2173701bb498958ab727f3329828c105a59ff3e92fece1347bb730c1e23e8c55528a15be7ba9659f645b8d231749c30f2d09cb7965b9cedeb61fba3788c857dc7e5818473dfc8597c1afc1d88ef3f5521ce333a85b309c1fac5a17975f4ab80549&state=secure_strong_random_string';
@@ -68,18 +72,23 @@
          openApp();
     }
   }
+
+  function callAppEvent() {
+     var json = "{'action': 'cashierEnd'}"
+     carplusCB.event(json)
+  }
     
-        function openApp() {
-            // Replace 'yourapp://' with your app's universal link
-            var universalLink = 'https://www.int.car-plus.cool/srental/recall/Proceess?key=f8c8787d-ac23-49c2-8b35-584ebd153bd2';
+  function openApp() {
+      // Replace 'yourapp://' with your app's universal link
+      var universalLink = 'https://www.int.car-plus.cool/srental/recall/Proceess?key=f8c8787d-ac23-49c2-8b35-584ebd153bd2';
 
-            // Try to open the app using the universal link
-            window.location.href = universalLink;
+      // Try to open the app using the universal link
+      window.location.href = universalLink;
 
-            // If the app is not installed, the user will stay on the current page
-            // You can handle this case by redirecting the user to the App Store
-            // or showing a message encouraging them to install the app.
-        }
+      // If the app is not installed, the user will stay on the current page
+      // You can handle this case by redirecting the user to the App Store
+      // or showing a message encouraging them to install the app.
+  }
 
 function isAppInstalled(urlScheme) {
     var iframe = document.createElement('iframe');
