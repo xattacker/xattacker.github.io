@@ -96,8 +96,31 @@
   }
 
   function downloadBlob() {
-    window.location.href = "blob:https://cashier.int.car-plus.cool/1540566d-9e71-48b7-8fe2-da789776a912";
+     let fileName = "fileName.csv";
+     const data = getRandomData();
+     let blob = new Blob([data], {type: "application/octet-stream"});
+     var href = URL.createObjectURL(blob);
+     // 從 Blob 取出資料
+     var link = document.createElement("a");
+     document.body.appendChild(link);
+     link.href = href;
+     link.download = fileName;
+     link.click();
   }
+
+function getRandomData() {
+  var header = "RandomHeader";
+  var data = "";
+  for (let i = 0; i < 5; i++) {
+    for (var j = 0; j < 2; j++) {
+      if (j > 0) {
+        data = data + ",";
+      }
+      data = data + "Item" + i + "_" + j;
+    }
+  }
+  return header + data;
+}
 
 function isAppInstalled(urlScheme) {
     var iframe = document.createElement('iframe');
