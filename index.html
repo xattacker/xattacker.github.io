@@ -65,8 +65,9 @@
   <br><br><br>
   <button onclick="callAppEvent_handleCarDepart()">Call App Event: handleCarDepart</button>
 
-
-  <button onclick="callAppEvent_scanInvoiceCarrierCode()">Call App Event: scanInvoiceCarrierCode</button>
+  <br><br>
+  <button onclick="callAppEvent_scanInvoiceCarrier()">Call App Event: scanInvoiceCarrier</button>
+  <br><br>
 
   <script>
   function openUtilToolKitApp() {
@@ -80,8 +81,8 @@
     }
   }
 
-  function callAppEvent_scanInvoiceCarrierCode() {
-     var json = "{\"action\": \"cashierEnd\"}";
+  function callAppEvent_scanInvoiceCarrier() {
+     var json = "{\"action\": \"scanInvoiceCarrier\"}";
      carplusCB.carplus_event(json);
   }
 
