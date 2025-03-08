@@ -36,7 +36,7 @@
 <br><br>
 <button onclick="downloadBlob()">Download Blob</button>
 <br><br>
-<br><br>
+
 
 <form action="demo-form.php">
  select iamge: <input type="file" name="image1" accept="image/*;capture=camera" />
@@ -63,8 +63,10 @@
   <button onclick="isAppInstalled('carplusgosmartint://srental.recall?key=8e21bki')">Check App Existed</button>
        
   <br><br><br>
-  <button onclick="callAppEvent()">Call App Event</button>
+  <button onclick="callAppEvent_handleCarDepart()">Call App Event: handleCarDepart</button>
 
+
+  <button onclick="callAppEvent_scanInvoiceCarrierCode()">Call App Event: scanInvoiceCarrierCode</button>
 
   <script>
   function openUtilToolKitApp() {
@@ -78,8 +80,17 @@
     }
   }
 
-  function callAppEvent() {
+  function callAppEvent_scanInvoiceCarrierCode() {
      var json = "{\"action\": \"cashierEnd\"}";
+     carplusCB.carplus_event(json);
+  }
+
+  function onInvoiceCarrierScanned(scanned) {
+    alert(scanned);
+  }
+    
+  function callAppEvent_handleCarDepart() {
+     var json = "{\"action\": \"handleCarDepart\"}";
      carplusCB.carplus_event(json);
   }
     
